@@ -7,7 +7,7 @@ import 'package:municipalidad_de_malargue/widgets/widgets.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:municipalidad_de_malargue/screens/tab_covid19.dart';
+// import 'package:municipalidad_de_malargue/screens/tab_covid19.dart';
 import 'package:municipalidad_de_malargue/screens/tab_inicio.dart';
 import 'package:municipalidad_de_malargue/screens/tab_telefono.dart';
 

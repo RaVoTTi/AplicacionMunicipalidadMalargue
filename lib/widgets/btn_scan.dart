@@ -14,9 +14,18 @@ class BtnScan extends StatelessWidget {
             child: SizedBox(
               height: 120,
               child: InkWell(
-                onTap: _scan,
+                onTap: () async {
+                  await Permission.camera.request();
+                  String barcode = await scanner.scan();
+                  if (barcode == null) {
+                    print('nothing return.');
+                  } else {
+                    await canLaunch(barcode) ? await launch(barcode) : throw 'Could not launch $barcode';
+                  }
+                },
                 child: Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
                   color: Colors.white,
                   child: Column(
                     children: <Widget>[
@@ -44,15 +53,14 @@ class BtnScan extends StatelessWidget {
       ),
     );
   }
-    Future _scan() async {
+
+  _scan() async {
     await Permission.camera.request();
     String barcode = await scanner.scan();
     if (barcode == null) {
       print('nothing return.');
     } else {
-
       openLink(barcode);
     }
   }
-
 }

@@ -4,8 +4,9 @@ class BtnGenerico extends StatelessWidget {
 
   final String name;
   final Function function;
+  final double width;
 
-  const BtnGenerico({@required this.name, @required this.function});
+  const BtnGenerico({@required this.name, @required this.function, this.width = 0.0 });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class BtnGenerico extends StatelessWidget {
                   child: Text(this.name),
                   style: ElevatedButton.styleFrom(
                     elevation: 5,
-                    minimumSize: Size(5,50),
+                    minimumSize: this.width == 0.0 ?  Size(5, 50) : Size(this.width,50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),

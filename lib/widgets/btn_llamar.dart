@@ -18,11 +18,12 @@ class BtnLlamar extends StatelessWidget {
           onPressed: this.function,
           child: Center(
             child: Text(
-              "LLAMAR",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                "LLAMAR",
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
             ),
-          ),
+          
         );
   }
 }

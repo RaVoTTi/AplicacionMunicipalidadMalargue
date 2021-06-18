@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:webfeed/webfeed.dart';
 import 'package:http/http.dart' as http;
@@ -15,6 +16,8 @@ class RSSDemo extends StatefulWidget {
 }
 
 class RSSDemoState extends State<RSSDemo> {
+
+  
   //
   // ignore: non_constant_identifier_names
   var FEED_URL = Uri.parse(
@@ -151,22 +154,24 @@ class RSSDemoState extends State<RSSDemo> {
     return null == _feed || null == _feed.items;
   }
 
-  body() {
+  body(double _height) {
     return isFeedEmpty()
         ? Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/cabecera.jpg'), fit: BoxFit.cover),
-            ),
+          color: Colors.white,
+            // decoration: BoxDecoration(
+            //   image: DecorationImage(
+                  
+            //       image: AssetImage('assets/cabecera.jpg'), fit: BoxFit.cover),
+            // ),
             child: Center(
-              child: LinearProgressIndicator(
-                backgroundColor: Color(0xff00939d),
-                valueColor: AlwaysStoppedAnimation(
-                  Color(0xff6a2b86),
-                ),
+              child: Image.asset(
+                
+                "assets/facha.gif",
+                height: _height * 0.4 ,
+                width: _height * 0.4 ,
+                // color: Colors.transparent,
               ),
-            ),
-          )
+            ))
         : RefreshIndicator(
             key: _refreshKey,
             child: list(),
@@ -176,6 +181,7 @@ class RSSDemoState extends State<RSSDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final _height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
@@ -187,7 +193,7 @@ class RSSDemoState extends State<RSSDemo> {
         ),
         backgroundColor: Colors.white,
       ),
-      body: body(),
+      body: body(_height),
     );
   }
 }

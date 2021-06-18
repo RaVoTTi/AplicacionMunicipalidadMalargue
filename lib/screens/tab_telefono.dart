@@ -1,8 +1,8 @@
-import 'package:clipboard/clipboard.dart';
+import 'package:municipalidad_de_malargue/helpers/func_open_link.dart';
 import 'package:municipalidad_de_malargue/screens/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:municipalidad_de_malargue/widgets/widgets.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 // import 'package:url_launcher/url_launcher.dart';
 //import 'package:url_launcher/url_launcher.dart';
 
@@ -148,9 +148,11 @@ class _TelefonoState extends State<TabTelefono> {
     print(this.height);
     return Container(
       color: Colors.white,
-      child: Column(
-        children: <Widget>[
-          GestureDetector(
+      child: FadeAnimation(
+        1,
+        child: Stack(
+          children: <Widget>[
+            GestureDetector(
               onHorizontalDragEnd: (DragEndDetails details) {
                 if (details.velocity.pixelsPerSecond.dx > 0) {
                   _preve();
@@ -158,123 +160,71 @@ class _TelefonoState extends State<TabTelefono> {
                   _next();
                 }
               },
+              child: ImgTelefonos(
+                heightImage: this.height * 0.4,
+                urlImage: products[currentIndex]['url'],
+              ),
+            ),
+            Positioned(
+              bottom: (this.height * 0.37),
+              left: 0,
+              right: 0,
               child: Container(
-                child: Stack(
-                   // TODO:
-                  children: [
-                    ImgTelefonos(
-                      heightImage: this.height * 0.4,
-                      urlImage: products[currentIndex]['url'],
-                    ),
-                    Positioned.fill(
-                        bottom: -(this.height * 0.3),
-                        child: Container(
-                        margin: EdgeInsets.all(0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: _buildIndicator(),
-                        ),
-                      ),
-                    ),
-                  ],
+                margin: EdgeInsets.all(0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: _buildIndicator(),
                 ),
-              )),
-          Container(
-            height: this.height * 0.3,
-            child: Transform.translate(
-              offset: Offset(0, -40),
-              child: FadeAnimation(
-                  1,
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(50),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            topRight: Radius.circular(30))),
-                    child: FadeAnimation(
-                      1.4,
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: this.height * 0.35,
+                width: double.infinity,
+                padding: EdgeInsets.all(50),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(height * 0.05),
+                        topRight: Radius.circular(height * 0.05))),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Text(
+                      products[currentIndex]['title'],
+                      style: TextStyle(
+                          color: Colors.grey[800],
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
                           Text(
-                            products[currentIndex]['title'],
+                            "Horarios de Atención:",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          ),
+                          Text(
+                            products[currentIndex]['description'],
                             style: TextStyle(
-                                color: Colors.grey[800],
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
+                                color: Color(0xff00939d),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
                           ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: <Widget>[
-                                Text(
-                                  "Horarios de Atención:",
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 12),
-                                ),
-                                Text(
-                                  products[currentIndex]['description'],
-                                  style: TextStyle(
-                                      color: Color(0xff00939d),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
-                                ),
-                              ]),
-                          BtnLlamar(
-                            function: () async => await canLaunch(
-                                    products[currentIndex]['number'])
-                                ? await launch(products[currentIndex]['number'])
-                                : throw showDialog(
-                                    context: context,
-                                    builder: (context) => AlertDialog(
-                                      title: Column(
-                                        children: [
-                                          Text(
-                                            'Su smartphone no es compatible con esta funcion, pero podra copiar el numero con el boton "Copiar"',
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 20),
-                                          ),
-                                          SizedBox(height: 5),
-                                          Text(
-                                            products[currentIndex]['number']
-                                                .substring(4),
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 20),
-                                          ),
-                                        ],
-                                      ),
-                                      actions: [
-                                        BtnGenerico(
-                                            function: () {
-                                              FlutterClipboard.copy(
-                                                      products[currentIndex]
-                                                              ['number']
-                                                          .substring(4))
-                                                  .then((value) =>
-                                                      print('copied'));
-                                              Navigator.of(context).pop();
-                                            },
-                                            name: 'Copiar'),
-                                        BtnGenerico(
-                                            function: () =>
-                                                Navigator.of(context).pop(),
-                                            name: 'Aceptar'),
-                                      ],
-                                    ),
-                                  ),
-                            width: width,
-                          ),
-                        ],
-                      ),
+                        ]),
+                    BtnLlamar(
+                      function: () =>
+                          openLink(products[currentIndex]['number']),
+                      width: width,
                     ),
-                  )),
+                  ],
+                ),
+              ),
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

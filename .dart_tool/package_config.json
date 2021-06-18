@@ -8,12 +8,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "bloc",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/bloc-7.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "boolean_selector",
       "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0",
       "packageUri": "lib/",
@@ -74,12 +68,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_bloc",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-7.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "flutter_plugin_android_lifecycle",
       "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.2",
       "packageUri": "lib/",
@@ -100,36 +88,6 @@
     {
       "name": "font_awesome_flutter",
       "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "geolocator",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator-7.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "geolocator_platform_interface",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator_platform_interface-2.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "geolocator_web",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator_web-2.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "google_maps_flutter",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.0.6",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "google_maps_flutter_platform_interface",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -188,12 +146,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "nested",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "path",
       "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0",
       "packageUri": "lib/",
@@ -230,12 +182,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "provider",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "qrscan",
       "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/qrscan-0.2.22",
       "packageUri": "lib/",
@@ -268,12 +214,6 @@
     {
       "name": "stream_channel",
       "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "stream_transform",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -351,7 +291,7 @@
     },
     {
       "name": "xml",
-      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/xml-5.1.0",
+      "rootUri": "file:///home/rivo/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/xml-5.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -362,7 +302,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-06-14T12:56:00.838072Z",
+  "generated": "2021-06-18T12:56:04.214305Z",
   "generator": "pub",
   "generatorVersion": "2.12.3"
 }
