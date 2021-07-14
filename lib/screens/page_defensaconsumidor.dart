@@ -9,7 +9,7 @@ import 'package:municipalidad_de_malargue/screens/page_servicios.dart';
 import 'package:municipalidad_de_malargue/widgets/widgets.dart';
 
 Map<String, String> _urls = {
-  'formdefensaconsumidor': 'https://infogov.com.ar/rentas/malargue/',
+  'formdefensaconsumidor': 'https://docs.google.com/forms/d/1scsWmVjHVUKyKyLHTgpdzFhoVmtb0b-CMeAAI0BHcV8/edit?usp=sharing',
   'teldefensaconsumidor': 'https://infogov.com.ar/rentas/malargue/'
 };
 
