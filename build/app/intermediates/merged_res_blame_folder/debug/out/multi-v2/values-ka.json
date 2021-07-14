@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/rivo/Documents/este/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
+            "outputFile": "/home/rivo/Documents/flutter/MunicipalidadApp/AplicacionMunicipalidadMalargue/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
             "map": [
                 {
                     "source": "/home/rivo/.gradle/caches/transforms-2/files-2.1/f419bf2442c9ba50831eeba89000c9a9/appcompat-1.1.0/res/values-ka/values-ka.xml",

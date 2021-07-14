@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/rivo/Documents/este/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "/home/rivo/Documents/flutter/MunicipalidadApp/AplicacionMunicipalidadMalargue/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/rivo/Documents/este/build/qrscan/intermediates/packaged_res/debug/values-w820dp-v13/values-w820dp-v13.xml",
+                    "source": "/home/rivo/Documents/flutter/MunicipalidadApp/AplicacionMunicipalidadMalargue/build/qrscan/intermediates/packaged_res/debug/values-w820dp-v13/values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

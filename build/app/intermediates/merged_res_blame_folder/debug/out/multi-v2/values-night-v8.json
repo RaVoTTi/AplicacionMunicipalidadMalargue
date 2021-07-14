@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/rivo/Documents/este/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/rivo/Documents/flutter/MunicipalidadApp/AplicacionMunicipalidadMalargue/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/rivo/Documents/este/android/app/src/main/res/values-night/color.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "41",
-                        "endOffsets": "94"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "41",
-                        "endOffsets": "92"
-                    }
-                },
-                {
-                    "source": "/home/rivo/Documents/este/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/rivo/Documents/flutter/MunicipalidadApp/AplicacionMunicipalidadMalargue/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -54,6 +37,23 @@
                         "startOffsets": "563,633,717,801,897,999,1101,1195",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "628,712,796,892,994,1096,1190,1279"
+                    }
+                },
+                {
+                    "source": "/home/rivo/Documents/flutter/MunicipalidadApp/AplicacionMunicipalidadMalargue/android/app/src/main/res/values-night/color.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "41",
+                        "endOffsets": "94"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "41",
+                        "endOffsets": "92"
                     }
                 }
             ]
