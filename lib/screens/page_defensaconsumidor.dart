@@ -10,7 +10,8 @@ import 'package:municipalidad_de_malargue/widgets/widgets.dart';
 
 Map<String, String> _urls = {
   'formdefensaconsumidor': 'https://docs.google.com/forms/d/1scsWmVjHVUKyKyLHTgpdzFhoVmtb0b-CMeAAI0BHcV8/edit?usp=sharing',
-  'teldefensaconsumidor': 'https://infogov.com.ar/rentas/malargue/'
+  'teldefensaconsumidor': '+5492604059263',
+  'abrirurldefensa': 'https://www.mendoza.gov.ar/prensa/defensa-del-consumidor-las-oficinas-municipales-prestan-un-servicio-esencial-para-los-ciudadanos/',
 };
 
 class DefensaConsumidorPage extends StatelessWidget {
@@ -42,19 +43,29 @@ class DefensaConsumidorPage extends StatelessWidget {
             items: [
               //AGREGAR IMAGENES AQUI DE DEFENSA AL CONSUMIDOR
               CardCarousel(
-                function: () => openLink(_urls['']),
+                function: () => openLink(_urls['abrirurldefensa']),
                 urlImage:
-                    'https://www.malargue.gov.ar/wp-content/uploads/2021/04/turismo.jpg',
+                    'https://www.malargue.gov.ar/wp-content/uploads/2021/07/fbe5702e-77b4-4d9d-936f-c99da4f3fc62.jpg',
               ),
               CardCarousel(
-                function: () => openLink(_urls['']),
+                function: () => openLink(_urls['abrirurldefensa']),
                 urlImage:
-                    'https://www.malargue.gov.ar/wp-content/uploads/2021/04/THESAURUS.jpg',
+                    'https://www.malargue.gov.ar/wp-content/uploads/2021/07/54ec35c0-0510-499a-b314-214196abd4c5.jpg',
               ),
               CardCarousel(
-                function: () => openLink(_urls['']),
+                function: () => openLink(_urls['abrirurldefensa']),
                 urlImage:
-                    'https://www.malargue.gov.ar/wp-content/uploads/2021/04/terminal.jpg',
+                    'https://www.malargue.gov.ar/wp-content/uploads/2021/07/b318c86f-d680-4e2a-877d-8eb323aebd43.jpg',
+              ),
+              CardCarousel(
+                function: () => openLink(_urls['abrirurldefensa']),
+                urlImage:
+                    'https://www.malargue.gov.ar/wp-content/uploads/2021/07/bb9a2a71-c2f6-470b-aef9-5359105b1415.jpg',
+              ),
+              CardCarousel(
+                function: () => openLink(_urls['abrirurldefensa']),
+                urlImage:
+                    'https://www.malargue.gov.ar/wp-content/uploads/2021/07/cf70ee4a-bd29-424b-b1a1-9ec1eae543ea.jpg',
               ),
             ],
           ),
