@@ -1,0 +1,715 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/webfeed/domain/rss_feed.dart', 'packages/url_launcher/url_launcher.dart', 'packages/http/src/multipart_request.dart', 'packages/flutter/src/material/refresh_indicator.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/rendering/paragraph.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/font_awesome_flutter/src/fa_icon.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/decoration_image.dart', 'packages/flutter/src/painting/image_resolution.dart', 'packages/flutter/src/painting/box_fit.dart', 'packages/flutter/src/material/progress_indicator.dart', 'packages/flutter/src/animation/listener_helpers.dart'], (function load__packages__municipalidad_de_malargue__screens__page_comunicados_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__webfeed__domain__rss_feed$46dart, packages__url_launcher__url_launcher$46dart, packages__http__src__multipart_request$46dart, packages__flutter__src__material__refresh_indicator$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__rendering__paragraph$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__font_awesome_flutter__src__fa_icon$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__decoration_image$46dart, packages__flutter__src__painting__image_resolution$46dart, packages__flutter__src__painting__box_fit$46dart, packages__flutter__src__material__progress_indicator$46dart, packages__flutter__src__animation__listener_helpers$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const rss_feed = packages__webfeed__domain__rss_feed$46dart.domain__rss_feed;
+  const url_launcher = packages__url_launcher__url_launcher$46dart.url_launcher;
+  const client$ = packages__http__src__multipart_request$46dart.src__client;
+  const refresh_indicator = packages__flutter__src__material__refresh_indicator$46dart.src__material__refresh_indicator;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const paragraph = packages__flutter__src__rendering__paragraph$46dart.src__rendering__paragraph;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const list_tile = packages__flutter__src__material__icon_button$46dart.src__material__list_tile;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const fa_icon = packages__font_awesome_flutter__src__fa_icon$46dart.src__fa_icon;
+  const font_awesome_flutter = packages__font_awesome_flutter__src__fa_icon$46dart.font_awesome_flutter;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const decoration_image = packages__flutter__src__painting__decoration_image$46dart.src__painting__decoration_image;
+  const image_resolution = packages__flutter__src__painting__image_resolution$46dart.src__painting__image_resolution;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  const progress_indicator = packages__flutter__src__material__progress_indicator$46dart.src__material__progress_indicator;
+  const animations = packages__flutter__src__animation__listener_helpers$46dart.src__animation__animations;
+  var page_comunicados = Object.create(dart.library);
+  var $isEmpty = dartx.isEmpty;
+  var $toString = dartx.toString;
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    RssFeedL: () => (T.RssFeedL = dart.constFn(dart.legacy(rss_feed.RssFeed)))(),
+    RssFeedLToNull: () => (T.RssFeedLToNull = dart.constFn(dart.fnType(core.Null, [T.RssFeedL()])))(),
+    RefreshIndicatorStateL: () => (T.RefreshIndicatorStateL = dart.constFn(dart.legacy(refresh_indicator.RefreshIndicatorState)))(),
+    GlobalKeyOfRefreshIndicatorStateL: () => (T.GlobalKeyOfRefreshIndicatorStateL = dart.constFn(framework.GlobalKey$(T.RefreshIndicatorStateL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetN: () => (T.WidgetN = dart.constFn(dart.nullable(framework.Widget)))(),
+    FutureOfvoid: () => (T.FutureOfvoid = dart.constFn(async.Future$(dart.void)))(),
+    FutureLOfvoid: () => (T.FutureLOfvoid = dart.constFn(dart.legacy(T.FutureOfvoid())))(),
+    VoidToFutureLOfvoid: () => (T.VoidToFutureLOfvoid = dart.constFn(dart.fnType(T.FutureLOfvoid(), [])))(),
+    ListTileL: () => (T.ListTileL = dart.constFn(dart.legacy(list_tile.ListTile)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    BuildContextLAndintLToListTileL: () => (T.BuildContextLAndintLToListTileL = dart.constFn(dart.fnType(T.ListTileL(), [T.BuildContextL(), T.intL()])))(),
+    ColorL: () => (T.ColorL = dart.constFn(dart.legacy(ui.Color)))(),
+    AlwaysStoppedAnimationOfColorL: () => (T.AlwaysStoppedAnimationOfColorL = dart.constFn(animations.AlwaysStoppedAnimation$(T.ColorL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 7,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 7,
+        [_Location_line]: 88,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxLines",
+        [_Location_column]: 7,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overflow",
+        [_Location_column]: 7,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 86,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 13,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 7,
+        [_Location_line]: 120,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 7,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 118,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 44,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 54,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13, C[14] || CT.C14], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 133,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "tileColor",
+        [_Location_column]: 11,
+        [_Location_line]: 131,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "hoverColor",
+        [_Location_column]: 11,
+        [_Location_line]: 132,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 11,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 11,
+        [_Location_line]: 134,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "trailing",
+        [_Location_column]: 11,
+        [_Location_line]: 136,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "contentPadding",
+        [_Location_column]: 11,
+        [_Location_line]: 137,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 11,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22, C[23] || CT.C23], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 130,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 7,
+        [_Location_line]: 127,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 7,
+        [_Location_line]: 128,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26, C[27] || CT.C27], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 126,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 17,
+        [_Location_line]: 158,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "valueColor",
+        [_Location_column]: 17,
+        [_Location_line]: 159,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30, C[31] || CT.C31], T._LocationL());
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 157,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 157,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.constList([C[34] || CT.C34], T._LocationL());
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[33] || CT.C33,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 156,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 11,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 156,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37, C[38] || CT.C38], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 13,
+        [_Location_line]: 164,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 165,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onRefresh",
+        [_Location_column]: 13,
+        [_Location_line]: 166,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.constList([C[41] || CT.C41, C[42] || CT.C42, C[43] || CT.C43], T._LocationL());
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[40] || CT.C40,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 163,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 174,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.constList([C[46] || CT.C46], T._LocationL());
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[45] || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 174,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 9,
+        [_Location_line]: 174,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 9,
+        [_Location_line]: 175,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.constList([C[49] || CT.C49, C[50] || CT.C50], T._LocationL());
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[48] || CT.C48,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 173,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 173,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 177,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.constList([C[53] || CT.C53, C[54] || CT.C54], T._LocationL());
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[52] || CT.C52,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 172,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_comunicados.dart"
+      });
+    }
+  }, false);
+  var C = Array(55).fill(void 0);
+  var I = ["package:municipalidad_de_malargue/screens/page_comunicados.dart"];
+  var title = dart.privateName(page_comunicados, "Comunicados.title");
+  page_comunicados.Comunicados = class Comunicados extends framework.StatefulWidget {
+    get title() {
+      return this[title];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    createState() {
+      return new page_comunicados.ComunicadosState.new();
+    }
+  };
+  (page_comunicados.Comunicados.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[title] = "RSS Feed Demo";
+    page_comunicados.Comunicados.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = page_comunicados.Comunicados.prototype;
+  dart.addTypeTests(page_comunicados.Comunicados);
+  dart.addTypeCaches(page_comunicados.Comunicados);
+  dart.setMethodSignature(page_comunicados.Comunicados, () => ({
+    __proto__: dart.getMethods(page_comunicados.Comunicados.__proto__),
+    createState: dart.fnType(dart.legacy(page_comunicados.ComunicadosState), [])
+  }));
+  dart.setLibraryUri(page_comunicados.Comunicados, I[0]);
+  dart.setFieldSignature(page_comunicados.Comunicados, () => ({
+    __proto__: dart.getFields(page_comunicados.Comunicados.__proto__),
+    title: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  var FEED_URL = dart.privateName(page_comunicados, "ComunicadosState.FEED_URL");
+  var _feed = dart.privateName(page_comunicados, "_feed");
+  var _title = dart.privateName(page_comunicados, "_title");
+  var _refreshKey = dart.privateName(page_comunicados, "_refreshKey");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  page_comunicados.ComunicadosState = class ComunicadosState extends framework.State$(dart.legacy(page_comunicados.Comunicados)) {
+    get FEED_URL() {
+      return this[FEED_URL];
+    }
+    set FEED_URL(value) {
+      this[FEED_URL] = value;
+    }
+    updateTitle(title) {
+      this.setState(dart.fn(() => {
+        this[_title] = T.StringL().as(title);
+      }, T.VoidToNull()));
+    }
+    updateFeed(feed) {
+      this.setState(dart.fn(() => {
+        this[_feed] = T.RssFeedL().as(feed);
+      }, T.VoidToNull()));
+    }
+    openFeed(url) {
+      return async.async(dart.void, (function* openFeed() {
+        if (dart.test(yield url_launcher.canLaunch(url))) {
+          yield url_launcher.launch(url, {forceSafariVC: true, forceWebView: false});
+          return;
+        }
+        this.updateTitle(page_comunicados.ComunicadosState.feedOpenErrorMsg);
+      }).bind(this));
+    }
+    load() {
+      return async.async(dart.dynamic, (function* load() {
+        this.updateTitle("Cargando Últimas Noticias");
+        this.loadFeed().then(core.Null, dart.fn(result => {
+          if (result == null || dart.toString(result)[$isEmpty]) {
+            this.updateTitle(page_comunicados.ComunicadosState.feedLoadErrorMsg);
+            return;
+          }
+          this.updateFeed(result);
+          this.updateTitle(this[_feed].title);
+        }, T.RssFeedLToNull()));
+      }).bind(this));
+    }
+    loadFeed() {
+      return async.async(T.RssFeedL(), (function* loadFeed() {
+        try {
+          let client = client$.Client.new();
+          let response = (yield client.get(this.FEED_URL));
+          return rss_feed.RssFeed.parse(response.body);
+        } catch (e$) {
+          let e = dart.getThrown(e$);
+        }
+        return null;
+      }).bind(this));
+    }
+    initState() {
+      super.initState();
+      this[_refreshKey] = T.GlobalKeyOfRefreshIndicatorStateL().new();
+      this.updateTitle(this.widget.title);
+      this.load();
+    }
+    title(title) {
+      return new text.Text.new(core.String.as(title), {style: new text_style.TextStyle.new({fontSize: 13.0, fontWeight: ui.FontWeight.w500}), maxLines: 3, overflow: paragraph.TextOverflow.ellipsis, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+    }
+    rightIcon() {
+      return new icon.Icon.new(icons.Icons.keyboard_arrow_right, {color: new ui.Color.new(4278227869), size: 30.0, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6});
+    }
+    list() {
+      return new scroll_view.ListView.builder({itemCount: this[_feed].items[$length], itemBuilder: dart.fn((context, index) => {
+          let item = this[_feed].items[$_get](index);
+          return new list_tile.ListTile.new({tileColor: colors.Colors.white, hoverColor: new ui.Color.new(4285148038), leading: new fa_icon.FaIcon.new(font_awesome_flutter.FontAwesomeIcons.newspaper, {color: new ui.Color.new(4278227869), $creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), title: T.WidgetN().as(this.title(item.title)), trailing: T.WidgetN().as(this.rightIcon()), contentPadding: new edge_insets.EdgeInsets.all(45.0), onTap: dart.fn(() => this.openFeed(item.link), T.VoidToFutureLOfvoid()), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
+        }, T.BuildContextLAndintLToListTileL()), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24});
+    }
+    isFeedEmpty() {
+      return this[_feed] == null || this[_feed].items == null;
+    }
+    body() {
+      return dart.dtest(this.isFeedEmpty()) ? new container.Container.new({decoration: new box_decoration.BoxDecoration.new({image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new("assets/cabecera.jpg"), fit: box_fit.BoxFit.cover})}), child: new basic.Center.new({child: new progress_indicator.LinearProgressIndicator.new({backgroundColor: new ui.Color.new(4278227869), valueColor: new (T.AlwaysStoppedAnimationOfColorL()).new(new ui.Color.new(4285148038)), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28}), $creationLocationd_0dea112b090073317d4: C[32] || CT.C32}), $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}) : new refresh_indicator.RefreshIndicator.new({key: this[_refreshKey], child: framework.Widget.as(this.list()), onRefresh: dart.fn(() => T.FutureLOfvoid().as(this.load()), T.VoidToFutureLOfvoid()), $creationLocationd_0dea112b090073317d4: C[39] || CT.C39});
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new("Comunicados Importantes", {$creationLocationd_0dea112b090073317d4: C[44] || CT.C44}), backgroundColor: new ui.Color.new(4278227869), $creationLocationd_0dea112b090073317d4: C[47] || CT.C47}), body: T.WidgetN().as(this.body()), $creationLocationd_0dea112b090073317d4: C[51] || CT.C51});
+    }
+  };
+  (page_comunicados.ComunicadosState.new = function() {
+    this[FEED_URL] = core.Uri.parse("https://www.malargue.gov.ar/category/comunicados-importantes/feed/");
+    this[_feed] = null;
+    this[_title] = null;
+    this[_refreshKey] = null;
+    page_comunicados.ComunicadosState.__proto__.new.call(this);
+    ;
+  }).prototype = page_comunicados.ComunicadosState.prototype;
+  dart.addTypeTests(page_comunicados.ComunicadosState);
+  dart.addTypeCaches(page_comunicados.ComunicadosState);
+  dart.setMethodSignature(page_comunicados.ComunicadosState, () => ({
+    __proto__: dart.getMethods(page_comunicados.ComunicadosState.__proto__),
+    updateTitle: dart.fnType(dart.dynamic, [dart.dynamic]),
+    updateFeed: dart.fnType(dart.dynamic, [dart.dynamic]),
+    openFeed: dart.fnType(dart.legacy(async.Future$(dart.void)), [dart.legacy(core.String)]),
+    load: dart.fnType(dart.dynamic, []),
+    loadFeed: dart.fnType(dart.legacy(async.Future$(dart.legacy(rss_feed.RssFeed))), []),
+    title: dart.fnType(dart.dynamic, [dart.dynamic]),
+    rightIcon: dart.fnType(dart.dynamic, []),
+    list: dart.fnType(dart.dynamic, []),
+    isFeedEmpty: dart.fnType(dart.dynamic, []),
+    body: dart.fnType(dart.dynamic, []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(page_comunicados.ComunicadosState, I[0]);
+  dart.setFieldSignature(page_comunicados.ComunicadosState, () => ({
+    __proto__: dart.getFields(page_comunicados.ComunicadosState.__proto__),
+    FEED_URL: dart.fieldType(dart.legacy(core.Uri)),
+    [_feed]: dart.fieldType(dart.legacy(rss_feed.RssFeed)),
+    [_title]: dart.fieldType(dart.legacy(core.String)),
+    [_refreshKey]: dart.fieldType(dart.legacy(framework.GlobalKey$(dart.legacy(refresh_indicator.RefreshIndicatorState))))
+  }));
+  dart.defineLazy(page_comunicados.ComunicadosState, {
+    /*page_comunicados.ComunicadosState.loadingFeedMsg*/get loadingFeedMsg() {
+      return "Cargando Últimas Noticias";
+    },
+    /*page_comunicados.ComunicadosState.feedLoadErrorMsg*/get feedLoadErrorMsg() {
+      return "Error al cargar la noticia. Verifica tu conexión a internet.";
+    },
+    /*page_comunicados.ComunicadosState.feedOpenErrorMsg*/get feedOpenErrorMsg() {
+      return "Error al abrir la noticia. Verifica tu conexión a internet.";
+    },
+    /*page_comunicados.ComunicadosState.placeholderImg*/get placeholderImg() {
+      return "images/no_image.png";
+    }
+  }, true);
+  dart.trackLibraries("packages/municipalidad_de_malargue/screens/page_comunicados.dart", {
+    "package:municipalidad_de_malargue/screens/page_comunicados.dart": page_comunicados
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["page_comunicados.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAUe;;;;;;;AAGqB;IAAkB;;;;IAHvC,cAAQ;AAFL;;EAAO;;;;;;;;;;;;;;;;;;;;;;IAWnB;;;;;;gBAUQ;AAGR,MAFF,cAAS;AACO,uBAAd,eAAS,KAAK;;IAElB;eAEW;AAGP,MAFF,cAAS;AACK,sBAAZ,gBAAQ,IAAI;;IAEhB;aAE6B;AAAR;AACnB,sBAAI,MAAM,uBAAU,GAAG;AAKpB,UAJD,MAAM,oBACJ,GAAG,kBACY,oBACD;AAEhB;;AAE2B,QAA7B,iBAAY;MACd;;;AAEI;AACyB,QAA3B;AAQE,QAPF,AAAW,gCAAK,QAAC;AACf,cAAS,AAAG,MAAM,YAAW,AAAW,cAAlB,MAAM;AACG,YAA7B,iBAAY;AACZ;;AAEgB,UAAlB,gBAAW,MAAM;AACO,UAAxB,iBAAY,AAAM;;MAEtB;;;AAEwB;AACtB;AACQ,uBAAc;AACd,0BAAW,MAAM,AAAO,MAAD,KAAK;AAClC,gBAAe,wBAAM,AAAS,QAAD;;cACtB;;AAGT,cAAO;MACT;;;AAImB,MAAX;AAC0C,MAAhD,oBAAc;AACW,MAAzB,iBAAY,AAAO;AACb,MAAN;IACF;UAEM;AACJ,YAAO,kCACL,KAAK,WACE,wCAAoB,kBAA6B,gCAC9C,aACa;IAE3B;;AA0BE,YAAO,mBACC,0CACC,iBAAM,mBACP;IAEV;;AAGE,YAAgB,8CACH,AAAM,AAAM,yCACV,SAAc,SAAa;AAChC,qBAAO,AAAM,AAAK,yBAAC,KAAK;AAC9B,gBAAO,wCACa,iCACN,iBAAM,sBACT,uBAAwB,yDAAiB,iBAAM,8FACjD,WAAM,AAAK,IAAD,mCAEP,mCACiB,+BAAI,cACxB,cAAM,cAAS,AAAK,IAAD;;IAIlC;;AAGE,YAAY,AAAG,AAAM,wBAAQ,AAAG,AAAM;IACxC;;AAGE,wBAAO,sBACD,yCACY,6CACH,iDACgB,oCAAW,6BACN,iCAEvB,6BACI,qEACY,iBAAM,yBACX,6CAAuB,iBAAM,gMAI/C,iDACO,8CACE,yBACI,mCAAM;IAE3B;UAG0B;AACxB,YAAO,oCACG,+BACC,kBAAK,wGACK,iBAAM,6FAEnB;IAEV;;;IA/JI,iBAAe,eAAM;IACjB;IAED;IAK0B;;;EAwJnC;;;;;;;;;;;;;;;;;;;;;;;;;;MA5JsB,gDAAc;;;MACd,kDAAgB;;;MAChB,kDAAgB;;;MAChB,gDAAc","file":"../../../../../packages/municipalidad_de_malargue/screens/page_comunicados.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__page_comunicados: page_comunicados
+  };
+}));
+
+//# sourceMappingURL=page_comunicados.dart.lib.js.map

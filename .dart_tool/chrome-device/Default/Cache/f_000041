@@ -1,0 +1,792 @@
+define(['dart_sdk', 'packages/plugin_platform_interface/plugin_platform_interface.dart', 'packages/flutter/src/services/system_channels.dart'], (function load__packages__permission_handler_platform_interface__src__method_channel__utils__codec_dart(dart_sdk, packages__plugin_platform_interface__plugin_platform_interface$46dart, packages__flutter__src__services__system_channels$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const collection = dart_sdk.collection;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const plugin_platform_interface = packages__plugin_platform_interface__plugin_platform_interface$46dart.plugin_platform_interface;
+  const platform_channel = packages__flutter__src__services__system_channels$46dart.src__services__platform_channel;
+  const message_codecs = packages__flutter__src__services__system_channels$46dart.src__services__message_codecs;
+  var codec = Object.create(dart.library);
+  var method_channel_permission_handler = Object.create(dart.library);
+  var permission_handler_platform_interface = Object.create(dart.library);
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  var $_get = dartx._get;
+  var $runtimeType = dartx.runtimeType;
+  var $hashCode = dartx.hashCode;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    MapEntryOfPermission$PermissionStatus: () => (T.MapEntryOfPermission$PermissionStatus = dart.constFn(core.MapEntry$(permission_handler_platform_interface.Permission, permission_handler_platform_interface.PermissionStatus)))(),
+    intAndintToMapEntryOfPermission$PermissionStatus: () => (T.intAndintToMapEntryOfPermission$PermissionStatus = dart.constFn(dart.fnType(T.MapEntryOfPermission$PermissionStatus(), [core.int, core.int])))(),
+    PermissionToint: () => (T.PermissionToint = dart.constFn(dart.fnType(core.int, [permission_handler_platform_interface.Permission])))(),
+    FutureOrOfbool: () => (T.FutureOrOfbool = dart.constFn(async.FutureOr$(core.bool)))(),
+    LinkedHashMapOfint$int: () => (T.LinkedHashMapOfint$int = dart.constFn(collection.LinkedHashMap$(core.int, core.int)))(),
+    MapOfPermission$PermissionStatus: () => (T.MapOfPermission$PermissionStatus = dart.constFn(core.Map$(permission_handler_platform_interface.Permission, permission_handler_platform_interface.PermissionStatus)))(),
+    PermissionStatusL: () => (T.PermissionStatusL = dart.constFn(dart.legacy(permission_handler_platform_interface.PermissionStatus)))(),
+    PermissionL: () => (T.PermissionL = dart.constFn(dart.legacy(permission_handler_platform_interface.Permission)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    ServiceStatusL: () => (T.ServiceStatusL = dart.constFn(dart.legacy(permission_handler_platform_interface.ServiceStatus)))(),
+    JSArrayOfPermissionStatus: () => (T.JSArrayOfPermissionStatus = dart.constFn(_interceptors.JSArray$(permission_handler_platform_interface.PermissionStatus)))(),
+    JSArrayOfServiceStatus: () => (T.JSArrayOfServiceStatus = dart.constFn(_interceptors.JSArray$(permission_handler_platform_interface.ServiceStatus)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: message_codecs.StandardMessageCodec.prototype
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: message_codecs.StandardMethodCodec.prototype,
+        [StandardMethodCodec_messageCodec]: C[2] || CT.C2
+      });
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: platform_channel.MethodChannel.prototype,
+        [MethodChannel__binaryMessenger]: null,
+        [MethodChannel_codec]: C[1] || CT.C1,
+        [MethodChannel_name]: "flutter.baseflow.com/permissions/methods"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionStatus.prototype,
+        [_name$]: "PermissionStatus.denied",
+        index: 0
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionStatus.prototype,
+        [_name$]: "PermissionStatus.granted",
+        index: 1
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionStatus.prototype,
+        [_name$]: "PermissionStatus.restricted",
+        index: 2
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionStatus.prototype,
+        [_name$]: "PermissionStatus.limited",
+        index: 3
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionStatus.prototype,
+        [_name$]: "PermissionStatus.permanentlyDenied",
+        index: 4
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7], T.PermissionStatusL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 0
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 1
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 2
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionWithService.prototype,
+        [value$]: 3
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionWithService.prototype,
+        [value$]: 4
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionWithService.prototype,
+        [value$]: 5
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 6
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 7
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: permission_handler_platform_interface.PermissionWithService.prototype,
+        [value$]: 8
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 9
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 10
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 11
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 12
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 13
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 14
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 15
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 16
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 17
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 18
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 19
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 20
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 21
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 22
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 23
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 24
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: permission_handler_platform_interface.Permission.prototype,
+        [value$]: 25
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22, C[23] || CT.C23, C[24] || CT.C24, C[25] || CT.C25, C[26] || CT.C26, C[27] || CT.C27, C[28] || CT.C28, C[29] || CT.C29, C[30] || CT.C30, C[31] || CT.C31, C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34], T.PermissionL());
+    },
+    get C36() {
+      return C[36] = dart.constList(["calendar", "camera", "contacts", "location", "locationAlways", "locationWhenInUse", "mediaLibrary", "microphone", "phone", "photos", "photosAddOnly", "reminders", "sensors", "sms", "speech", "storage", "ignoreBatteryOptimizations", "notification", "access_media_location", "activity_recognition", "unknown", "bluetooth", "manageExternalStorage", "systemAlertWindow", "requestInstallPackages", "appTrackingTransparency"], T.StringL());
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: permission_handler_platform_interface.ServiceStatus.prototype,
+        [_name$]: "ServiceStatus.disabled",
+        index: 0
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: permission_handler_platform_interface.ServiceStatus.prototype,
+        [_name$]: "ServiceStatus.enabled",
+        index: 1
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: permission_handler_platform_interface.ServiceStatus.prototype,
+        [_name$]: "ServiceStatus.notApplicable",
+        index: 2
+      });
+    },
+    get C40() {
+      return C[40] = dart.constList([C[37] || CT.C37, C[38] || CT.C38, C[39] || CT.C39], T.ServiceStatusL());
+    }
+  }, false);
+  var C = Array(41).fill(void 0);
+  var I = [
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-3.5.0/lib/src/method_channel/utils/codec.dart",
+    "package:permission_handler_platform_interface/src/method_channel/utils/codec.dart",
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-3.5.0/lib/src/method_channel/method_channel_permission_handler.dart",
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-3.5.0/lib/src/permission_handler_platform_interface.dart",
+    "package:permission_handler_platform_interface/permission_handler_platform_interface.dart",
+    "package:permission_handler_platform_interface/src/method_channel/method_channel_permission_handler.dart",
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-3.5.0/lib/src/permission_status.dart",
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-3.5.0/lib/src/permissions.dart",
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_platform_interface-3.5.0/lib/src/service_status.dart"
+  ];
+  codec.Codec = class Codec extends core.Object {
+    static decodePermissionStatus(value) {
+      if (value == null) dart.nullFailed(I[0], 7, 54, "value");
+      return permission_handler_platform_interface['PermissionStatusValue|statusByValue'](value);
+    }
+    static decodeServiceStatus(value) {
+      if (value == null) dart.nullFailed(I[0], 12, 48, "value");
+      return permission_handler_platform_interface['ServiceStatusValue|statusByValue'](value);
+    }
+    static decodePermissionRequestResult(value) {
+      if (value == null) dart.nullFailed(I[0], 19, 21, "value");
+      return value[$map](permission_handler_platform_interface.Permission, permission_handler_platform_interface.PermissionStatus, dart.fn((key, value) => {
+        if (key == null) dart.nullFailed(I[0], 20, 23, "key");
+        if (value == null) dart.nullFailed(I[0], 20, 28, "value");
+        return new (T.MapEntryOfPermission$PermissionStatus()).__(permission_handler_platform_interface.Permission.byValue(key), permission_handler_platform_interface['PermissionStatusValue|statusByValue'](value));
+      }, T.intAndintToMapEntryOfPermission$PermissionStatus()));
+    }
+    static encodePermissions(permissions) {
+      if (permissions == null) dart.nullFailed(I[0], 26, 55, "permissions");
+      return permissions[$map](core.int, dart.fn(it => {
+        if (it == null) dart.nullFailed(I[0], 27, 29, "it");
+        return it.value;
+      }, T.PermissionToint()))[$toList]();
+    }
+  };
+  (codec.Codec.new = function() {
+    ;
+  }).prototype = codec.Codec.prototype;
+  dart.addTypeTests(codec.Codec);
+  dart.addTypeCaches(codec.Codec);
+  dart.setLibraryUri(codec.Codec, I[1]);
+  permission_handler_platform_interface.PermissionHandlerPlatform = class PermissionHandlerPlatform extends plugin_platform_interface.PlatformInterface {
+    static get instance() {
+      return permission_handler_platform_interface.PermissionHandlerPlatform._instance;
+    }
+    static set instance(instance) {
+      if (instance == null) dart.nullFailed(I[3], 27, 49, "instance");
+      plugin_platform_interface.PlatformInterface.verifyToken(instance, permission_handler_platform_interface.PermissionHandlerPlatform._token);
+      permission_handler_platform_interface.PermissionHandlerPlatform._instance = instance;
+    }
+    checkPermissionStatus(permission) {
+      if (permission == null) dart.nullFailed(I[3], 33, 61, "permission");
+      dart.throw(new core.UnimplementedError.new("checkPermissionStatus() has not been implemented."));
+    }
+    checkServiceStatus(permission) {
+      if (permission == null) dart.nullFailed(I[3], 59, 55, "permission");
+      dart.throw(new core.UnimplementedError.new("checkServiceStatus() has not been implemented."));
+    }
+    openAppSettings() {
+      dart.throw(new core.UnimplementedError.new("openAppSettings() has not been implemented."));
+    }
+    requestPermissions(permissions) {
+      if (permissions == null) dart.nullFailed(I[3], 76, 24, "permissions");
+      dart.throw(new core.UnimplementedError.new("requestPermissions() has not been implemented."));
+    }
+    shouldShowRequestPermissionRationale(permission) {
+      if (permission == null) dart.nullFailed(I[3], 84, 64, "permission");
+      dart.throw(new core.UnimplementedError.new("shouldShowRequestPermissionRationale() has not been implemented."));
+    }
+  };
+  (permission_handler_platform_interface.PermissionHandlerPlatform.new = function() {
+    permission_handler_platform_interface.PermissionHandlerPlatform.__proto__.new.call(this, {token: permission_handler_platform_interface.PermissionHandlerPlatform._token});
+    ;
+  }).prototype = permission_handler_platform_interface.PermissionHandlerPlatform.prototype;
+  dart.addTypeTests(permission_handler_platform_interface.PermissionHandlerPlatform);
+  dart.addTypeCaches(permission_handler_platform_interface.PermissionHandlerPlatform);
+  dart.setMethodSignature(permission_handler_platform_interface.PermissionHandlerPlatform, () => ({
+    __proto__: dart.getMethods(permission_handler_platform_interface.PermissionHandlerPlatform.__proto__),
+    checkPermissionStatus: dart.fnType(async.Future$(permission_handler_platform_interface.PermissionStatus), [permission_handler_platform_interface.Permission]),
+    checkServiceStatus: dart.fnType(async.Future$(permission_handler_platform_interface.ServiceStatus), [permission_handler_platform_interface.Permission]),
+    openAppSettings: dart.fnType(async.Future$(core.bool), []),
+    requestPermissions: dart.fnType(async.Future$(core.Map$(permission_handler_platform_interface.Permission, permission_handler_platform_interface.PermissionStatus)), [core.List$(permission_handler_platform_interface.Permission)]),
+    shouldShowRequestPermissionRationale: dart.fnType(async.Future$(core.bool), [permission_handler_platform_interface.Permission])
+  }));
+  dart.setLibraryUri(permission_handler_platform_interface.PermissionHandlerPlatform, I[4]);
+  dart.defineLazy(permission_handler_platform_interface.PermissionHandlerPlatform, {
+    /*permission_handler_platform_interface.PermissionHandlerPlatform._token*/get _token() {
+      return new core.Object.new();
+    },
+    /*permission_handler_platform_interface.PermissionHandlerPlatform._instance*/get _instance() {
+      return new method_channel_permission_handler.MethodChannelPermissionHandler.new();
+    },
+    set _instance(_) {}
+  }, false);
+  method_channel_permission_handler.MethodChannelPermissionHandler = class MethodChannelPermissionHandler extends permission_handler_platform_interface.PermissionHandlerPlatform {
+    checkPermissionStatus(permission) {
+      if (permission == null) dart.nullFailed(I[2], 14, 61, "permission");
+      return async.async(permission_handler_platform_interface.PermissionStatus, function* checkPermissionStatus() {
+        let status = (yield method_channel_permission_handler._methodChannel.invokeMethod(dart.dynamic, "checkPermissionStatus", permission.value));
+        return codec.Codec.decodePermissionStatus(core.int.as(status));
+      });
+    }
+    checkServiceStatus(permission) {
+      if (permission == null) dart.nullFailed(I[2], 42, 55, "permission");
+      return async.async(permission_handler_platform_interface.ServiceStatus, function* checkServiceStatus() {
+        let status = (yield method_channel_permission_handler._methodChannel.invokeMethod(dart.dynamic, "checkServiceStatus", permission.value));
+        return codec.Codec.decodeServiceStatus(core.int.as(status));
+      });
+    }
+    openAppSettings() {
+      return async.async(core.bool, function* openAppSettings() {
+        let t0;
+        let wasOpened = (yield method_channel_permission_handler._methodChannel.invokeMethod(dart.dynamic, "openAppSettings"));
+        return T.FutureOrOfbool().as((t0 = wasOpened, t0 == null ? false : t0));
+      });
+    }
+    requestPermissions(permissions) {
+      if (permissions == null) dart.nullFailed(I[2], 64, 24, "permissions");
+      return async.async(T.MapOfPermission$PermissionStatus(), function* requestPermissions() {
+        let data = codec.Codec.encodePermissions(permissions);
+        let status = (yield method_channel_permission_handler._methodChannel.invokeMethod(dart.dynamic, "requestPermissions", data));
+        return codec.Codec.decodePermissionRequestResult(T.LinkedHashMapOfint$int().from(core.Map.as(status)));
+      });
+    }
+    shouldShowRequestPermissionRationale(permission) {
+      if (permission == null) dart.nullFailed(I[2], 77, 18, "permission");
+      return async.async(core.bool, function* shouldShowRequestPermissionRationale() {
+        let t0;
+        let shouldShowRationale = (yield method_channel_permission_handler._methodChannel.invokeMethod(dart.dynamic, "shouldShowRequestPermissionRationale", permission.value));
+        return T.FutureOrOfbool().as((t0 = shouldShowRationale, t0 == null ? false : t0));
+      });
+    }
+  };
+  (method_channel_permission_handler.MethodChannelPermissionHandler.new = function() {
+    method_channel_permission_handler.MethodChannelPermissionHandler.__proto__.new.call(this);
+    ;
+  }).prototype = method_channel_permission_handler.MethodChannelPermissionHandler.prototype;
+  dart.addTypeTests(method_channel_permission_handler.MethodChannelPermissionHandler);
+  dart.addTypeCaches(method_channel_permission_handler.MethodChannelPermissionHandler);
+  dart.setLibraryUri(method_channel_permission_handler.MethodChannelPermissionHandler, I[5]);
+  var MethodChannel__binaryMessenger = dart.privateName(platform_channel, "MethodChannel._binaryMessenger");
+  var StandardMethodCodec_messageCodec = dart.privateName(message_codecs, "StandardMethodCodec.messageCodec");
+  var MethodChannel_codec = dart.privateName(platform_channel, "MethodChannel.codec");
+  var MethodChannel_name = dart.privateName(platform_channel, "MethodChannel.name");
+  dart.defineLazy(method_channel_permission_handler, {
+    /*method_channel_permission_handler._methodChannel*/get _methodChannel() {
+      return C[0] || CT.C0;
+    }
+  }, false);
+  var _name$ = dart.privateName(permission_handler_platform_interface, "_name");
+  permission_handler_platform_interface.PermissionStatus = class PermissionStatus extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (permission_handler_platform_interface.PermissionStatus.new = function(index, _name) {
+    if (index == null) dart.nullFailed(I[6], 4, 6, "index");
+    if (_name == null) dart.nullFailed(I[6], 4, 6, "_name");
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = permission_handler_platform_interface.PermissionStatus.prototype;
+  dart.addTypeTests(permission_handler_platform_interface.PermissionStatus);
+  dart.addTypeCaches(permission_handler_platform_interface.PermissionStatus);
+  dart.setLibraryUri(permission_handler_platform_interface.PermissionStatus, I[4]);
+  dart.setFieldSignature(permission_handler_platform_interface.PermissionStatus, () => ({
+    __proto__: dart.getFields(permission_handler_platform_interface.PermissionStatus.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(permission_handler_platform_interface.PermissionStatus, ['toString']);
+  permission_handler_platform_interface.PermissionStatus.denied = C[3] || CT.C3;
+  permission_handler_platform_interface.PermissionStatus.granted = C[4] || CT.C4;
+  permission_handler_platform_interface.PermissionStatus.restricted = C[5] || CT.C5;
+  permission_handler_platform_interface.PermissionStatus.limited = C[6] || CT.C6;
+  permission_handler_platform_interface.PermissionStatus.permanentlyDenied = C[7] || CT.C7;
+  permission_handler_platform_interface.PermissionStatus.values = C[8] || CT.C8;
+  var value$ = dart.privateName(permission_handler_platform_interface, "Permission.value");
+  permission_handler_platform_interface.Permission = class Permission extends core.Object {
+    get value() {
+      return this[value$];
+    }
+    set value(value) {
+      super.value = value;
+    }
+    static byValue(value) {
+      if (value == null) dart.nullFailed(I[7], 17, 34, "value");
+      return permission_handler_platform_interface.Permission.values[$_get](value);
+    }
+    toString() {
+      return "Permission." + dart.str(permission_handler_platform_interface.Permission._names[$_get](this.value));
+    }
+    _equals(other) {
+      if (other == null) return false;
+      if (this === other) {
+        return true;
+      }
+      if (!dart.equals(dart.runtimeType(other), this[$runtimeType])) {
+        return false;
+      }
+      return permission_handler_platform_interface.Permission.is(other) && other.value == this.value;
+    }
+    get hashCode() {
+      return dart.hashCode(this.value);
+    }
+  };
+  (permission_handler_platform_interface.Permission.__ = function(value) {
+    if (value == null) dart.nullFailed(I[7], 16, 27, "value");
+    this[value$] = value;
+    ;
+  }).prototype = permission_handler_platform_interface.Permission.prototype;
+  dart.addTypeTests(permission_handler_platform_interface.Permission);
+  dart.addTypeCaches(permission_handler_platform_interface.Permission);
+  dart.setLibraryUri(permission_handler_platform_interface.Permission, I[4]);
+  dart.setFieldSignature(permission_handler_platform_interface.Permission, () => ({
+    __proto__: dart.getFields(permission_handler_platform_interface.Permission.__proto__),
+    value: dart.finalFieldType(core.int)
+  }));
+  dart.defineExtensionMethods(permission_handler_platform_interface.Permission, ['toString', '_equals']);
+  dart.defineExtensionAccessors(permission_handler_platform_interface.Permission, ['hashCode']);
+  dart.defineLazy(permission_handler_platform_interface.Permission, {
+    /*permission_handler_platform_interface.Permission.calendar*/get calendar() {
+      return C[9] || CT.C9;
+    },
+    /*permission_handler_platform_interface.Permission.camera*/get camera() {
+      return C[10] || CT.C10;
+    },
+    /*permission_handler_platform_interface.Permission.contacts*/get contacts() {
+      return C[11] || CT.C11;
+    },
+    /*permission_handler_platform_interface.Permission.location*/get location() {
+      return C[12] || CT.C12;
+    },
+    /*permission_handler_platform_interface.Permission.locationAlways*/get locationAlways() {
+      return C[13] || CT.C13;
+    },
+    /*permission_handler_platform_interface.Permission.locationWhenInUse*/get locationWhenInUse() {
+      return C[14] || CT.C14;
+    },
+    /*permission_handler_platform_interface.Permission.mediaLibrary*/get mediaLibrary() {
+      return C[15] || CT.C15;
+    },
+    /*permission_handler_platform_interface.Permission.microphone*/get microphone() {
+      return C[16] || CT.C16;
+    },
+    /*permission_handler_platform_interface.Permission.phone*/get phone() {
+      return C[17] || CT.C17;
+    },
+    /*permission_handler_platform_interface.Permission.photos*/get photos() {
+      return C[18] || CT.C18;
+    },
+    /*permission_handler_platform_interface.Permission.photosAddOnly*/get photosAddOnly() {
+      return C[19] || CT.C19;
+    },
+    /*permission_handler_platform_interface.Permission.reminders*/get reminders() {
+      return C[20] || CT.C20;
+    },
+    /*permission_handler_platform_interface.Permission.sensors*/get sensors() {
+      return C[21] || CT.C21;
+    },
+    /*permission_handler_platform_interface.Permission.sms*/get sms() {
+      return C[22] || CT.C22;
+    },
+    /*permission_handler_platform_interface.Permission.speech*/get speech() {
+      return C[23] || CT.C23;
+    },
+    /*permission_handler_platform_interface.Permission.storage*/get storage() {
+      return C[24] || CT.C24;
+    },
+    /*permission_handler_platform_interface.Permission.ignoreBatteryOptimizations*/get ignoreBatteryOptimizations() {
+      return C[25] || CT.C25;
+    },
+    /*permission_handler_platform_interface.Permission.notification*/get notification() {
+      return C[26] || CT.C26;
+    },
+    /*permission_handler_platform_interface.Permission.accessMediaLocation*/get accessMediaLocation() {
+      return C[27] || CT.C27;
+    },
+    /*permission_handler_platform_interface.Permission.activityRecognition*/get activityRecognition() {
+      return C[28] || CT.C28;
+    },
+    /*permission_handler_platform_interface.Permission.unknown*/get unknown() {
+      return C[29] || CT.C29;
+    },
+    /*permission_handler_platform_interface.Permission.bluetooth*/get bluetooth() {
+      return C[30] || CT.C30;
+    },
+    /*permission_handler_platform_interface.Permission.manageExternalStorage*/get manageExternalStorage() {
+      return C[31] || CT.C31;
+    },
+    /*permission_handler_platform_interface.Permission.systemAlertWindow*/get systemAlertWindow() {
+      return C[32] || CT.C32;
+    },
+    /*permission_handler_platform_interface.Permission.requestInstallPackages*/get requestInstallPackages() {
+      return C[33] || CT.C33;
+    },
+    /*permission_handler_platform_interface.Permission.appTrackingTransparency*/get appTrackingTransparency() {
+      return C[34] || CT.C34;
+    },
+    /*permission_handler_platform_interface.Permission.values*/get values() {
+      return C[35] || CT.C35;
+    },
+    /*permission_handler_platform_interface.Permission._names*/get _names() {
+      return C[36] || CT.C36;
+    }
+  }, false);
+  permission_handler_platform_interface.PermissionWithService = class PermissionWithService extends permission_handler_platform_interface.Permission {};
+  (permission_handler_platform_interface.PermissionWithService.__ = function(value) {
+    if (value == null) dart.nullFailed(I[7], 7, 37, "value");
+    permission_handler_platform_interface.PermissionWithService.__proto__.__.call(this, value);
+    ;
+  }).prototype = permission_handler_platform_interface.PermissionWithService.prototype;
+  (permission_handler_platform_interface.PermissionWithService.private = function(value) {
+    if (value == null) dart.nullFailed(I[7], 10, 43, "value");
+    permission_handler_platform_interface.PermissionWithService.__proto__.__.call(this, value);
+    ;
+  }).prototype = permission_handler_platform_interface.PermissionWithService.prototype;
+  dart.addTypeTests(permission_handler_platform_interface.PermissionWithService);
+  dart.addTypeCaches(permission_handler_platform_interface.PermissionWithService);
+  dart.setLibraryUri(permission_handler_platform_interface.PermissionWithService, I[4]);
+  permission_handler_platform_interface.ServiceStatus = class ServiceStatus extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (permission_handler_platform_interface.ServiceStatus.new = function(index, _name) {
+    if (index == null) dart.nullFailed(I[8], 3, 6, "index");
+    if (_name == null) dart.nullFailed(I[8], 3, 6, "_name");
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = permission_handler_platform_interface.ServiceStatus.prototype;
+  dart.addTypeTests(permission_handler_platform_interface.ServiceStatus);
+  dart.addTypeCaches(permission_handler_platform_interface.ServiceStatus);
+  dart.setLibraryUri(permission_handler_platform_interface.ServiceStatus, I[4]);
+  dart.setFieldSignature(permission_handler_platform_interface.ServiceStatus, () => ({
+    __proto__: dart.getFields(permission_handler_platform_interface.ServiceStatus.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(permission_handler_platform_interface.ServiceStatus, ['toString']);
+  permission_handler_platform_interface.ServiceStatus.disabled = C[37] || CT.C37;
+  permission_handler_platform_interface.ServiceStatus.enabled = C[38] || CT.C38;
+  permission_handler_platform_interface.ServiceStatus.notApplicable = C[39] || CT.C39;
+  permission_handler_platform_interface.ServiceStatus.values = C[40] || CT.C40;
+  permission_handler_platform_interface['PermissionStatusValue|get#value'] = function PermissionStatusValue$124get$35value($this) {
+    if ($this == null) dart.nullFailed(I[6], 29, 11, "#this");
+    switch ($this) {
+      case C[3] || CT.C3:
+      {
+        return 0;
+      }
+      case C[4] || CT.C4:
+      {
+        return 1;
+      }
+      case C[5] || CT.C5:
+      {
+        return 2;
+      }
+      case C[6] || CT.C6:
+      {
+        return 3;
+      }
+      case C[7] || CT.C7:
+      {
+        return 4;
+      }
+      default:
+      {
+        dart.throw(new core.UnimplementedError.new());
+      }
+    }
+  };
+  permission_handler_platform_interface['PermissionStatusValue|statusByValue'] = function PermissionStatusValue$124statusByValue(value) {
+    if (value == null) dart.nullFailed(I[6], 46, 45, "value");
+    return T.JSArrayOfPermissionStatus().of([permission_handler_platform_interface.PermissionStatus.denied, permission_handler_platform_interface.PermissionStatus.granted, permission_handler_platform_interface.PermissionStatus.restricted, permission_handler_platform_interface.PermissionStatus.limited, permission_handler_platform_interface.PermissionStatus.permanentlyDenied])[$_get](value);
+  };
+  permission_handler_platform_interface['PermissionStatusGetters|get#isDenied'] = function PermissionStatusGetters$124get$35isDenied($this) {
+    if ($this == null) dart.nullFailed(I[6], 59, 12, "#this");
+    return $this == permission_handler_platform_interface.PermissionStatus.denied;
+  };
+  permission_handler_platform_interface['PermissionStatusGetters|get#isGranted'] = function PermissionStatusGetters$124get$35isGranted($this) {
+    if ($this == null) dart.nullFailed(I[6], 62, 12, "#this");
+    return $this == permission_handler_platform_interface.PermissionStatus.granted;
+  };
+  permission_handler_platform_interface['PermissionStatusGetters|get#isRestricted'] = function PermissionStatusGetters$124get$35isRestricted($this) {
+    if ($this == null) dart.nullFailed(I[6], 68, 12, "#this");
+    return $this == permission_handler_platform_interface.PermissionStatus.restricted;
+  };
+  permission_handler_platform_interface['PermissionStatusGetters|get#isPermanentlyDenied'] = function PermissionStatusGetters$124get$35isPermanentlyDenied($this) {
+    if ($this == null) dart.nullFailed(I[6], 74, 12, "#this");
+    return $this == permission_handler_platform_interface.PermissionStatus.permanentlyDenied;
+  };
+  permission_handler_platform_interface['PermissionStatusGetters|get#isLimited'] = function PermissionStatusGetters$124get$35isLimited($this) {
+    if ($this == null) dart.nullFailed(I[6], 76, 12, "#this");
+    return $this == permission_handler_platform_interface.PermissionStatus.limited;
+  };
+  permission_handler_platform_interface['FuturePermissionStatusGetters|get#isGranted'] = function FuturePermissionStatusGetters$124get$35isGranted($this) {
+    if ($this == null) dart.nullFailed(I[6], 81, 20, "#this");
+    return async.async(core.bool, function* FuturePermissionStatusGetters$124get$35isGranted() {
+      return permission_handler_platform_interface['PermissionStatusGetters|get#isGranted'](yield $this);
+    });
+  };
+  permission_handler_platform_interface['FuturePermissionStatusGetters|get#isDenied'] = function FuturePermissionStatusGetters$124get$35isDenied($this) {
+    if ($this == null) dart.nullFailed(I[6], 84, 20, "#this");
+    return async.async(core.bool, function* FuturePermissionStatusGetters$124get$35isDenied() {
+      return permission_handler_platform_interface['PermissionStatusGetters|get#isDenied'](yield $this);
+    });
+  };
+  permission_handler_platform_interface['FuturePermissionStatusGetters|get#isRestricted'] = function FuturePermissionStatusGetters$124get$35isRestricted($this) {
+    if ($this == null) dart.nullFailed(I[6], 90, 20, "#this");
+    return async.async(core.bool, function* FuturePermissionStatusGetters$124get$35isRestricted() {
+      return permission_handler_platform_interface['PermissionStatusGetters|get#isRestricted'](yield $this);
+    });
+  };
+  permission_handler_platform_interface['FuturePermissionStatusGetters|get#isPermanentlyDenied'] = function FuturePermissionStatusGetters$124get$35isPermanentlyDenied($this) {
+    if ($this == null) dart.nullFailed(I[6], 96, 20, "#this");
+    return async.async(core.bool, function* FuturePermissionStatusGetters$124get$35isPermanentlyDenied() {
+      return permission_handler_platform_interface['PermissionStatusGetters|get#isPermanentlyDenied'](yield $this);
+    });
+  };
+  permission_handler_platform_interface['FuturePermissionStatusGetters|get#isLimited'] = function FuturePermissionStatusGetters$124get$35isLimited($this) {
+    if ($this == null) dart.nullFailed(I[6], 99, 20, "#this");
+    return async.async(core.bool, function* FuturePermissionStatusGetters$124get$35isLimited() {
+      return permission_handler_platform_interface['PermissionStatusGetters|get#isLimited'](yield $this);
+    });
+  };
+  permission_handler_platform_interface['ServiceStatusValue|get#value'] = function ServiceStatusValue$124get$35value($this) {
+    if ($this == null) dart.nullFailed(I[8], 16, 11, "#this");
+    switch ($this) {
+      case C[37] || CT.C37:
+      {
+        return 0;
+      }
+      case C[38] || CT.C38:
+      {
+        return 1;
+      }
+      case C[39] || CT.C39:
+      {
+        return 2;
+      }
+      default:
+      {
+        dart.throw(new core.UnimplementedError.new());
+      }
+    }
+  };
+  permission_handler_platform_interface['ServiceStatusValue|statusByValue'] = function ServiceStatusValue$124statusByValue(value) {
+    if (value == null) dart.nullFailed(I[8], 29, 42, "value");
+    return T.JSArrayOfServiceStatus().of([permission_handler_platform_interface.ServiceStatus.disabled, permission_handler_platform_interface.ServiceStatus.enabled, permission_handler_platform_interface.ServiceStatus.notApplicable])[$_get](value);
+  };
+  permission_handler_platform_interface['ServiceStatusGetters|get#isDisabled'] = function ServiceStatusGetters$124get$35isDisabled($this) {
+    if ($this == null) dart.nullFailed(I[8], 40, 12, "#this");
+    return $this == permission_handler_platform_interface.ServiceStatus.disabled;
+  };
+  permission_handler_platform_interface['ServiceStatusGetters|get#isEnabled'] = function ServiceStatusGetters$124get$35isEnabled($this) {
+    if ($this == null) dart.nullFailed(I[8], 43, 12, "#this");
+    return $this == permission_handler_platform_interface.ServiceStatus.enabled;
+  };
+  permission_handler_platform_interface['ServiceStatusGetters|get#isNotApplicable'] = function ServiceStatusGetters$124get$35isNotApplicable($this) {
+    if ($this == null) dart.nullFailed(I[8], 47, 12, "#this");
+    return $this == permission_handler_platform_interface.ServiceStatus.notApplicable;
+  };
+  permission_handler_platform_interface['FutureServiceStatusGetters|get#isDisabled'] = function FutureServiceStatusGetters$124get$35isDisabled($this) {
+    if ($this == null) dart.nullFailed(I[8], 52, 20, "#this");
+    return async.async(core.bool, function* FutureServiceStatusGetters$124get$35isDisabled() {
+      return permission_handler_platform_interface['ServiceStatusGetters|get#isDisabled'](yield $this);
+    });
+  };
+  permission_handler_platform_interface['FutureServiceStatusGetters|get#isEnabled'] = function FutureServiceStatusGetters$124get$35isEnabled($this) {
+    if ($this == null) dart.nullFailed(I[8], 55, 20, "#this");
+    return async.async(core.bool, function* FutureServiceStatusGetters$124get$35isEnabled() {
+      return permission_handler_platform_interface['ServiceStatusGetters|get#isEnabled'](yield $this);
+    });
+  };
+  permission_handler_platform_interface['FutureServiceStatusGetters|get#isNotApplicable'] = function FutureServiceStatusGetters$124get$35isNotApplicable($this) {
+    if ($this == null) dart.nullFailed(I[8], 59, 20, "#this");
+    return async.async(core.bool, function* FutureServiceStatusGetters$124get$35isNotApplicable() {
+      return permission_handler_platform_interface['ServiceStatusGetters|get#isNotApplicable'](yield $this);
+    });
+  };
+  dart.trackLibraries("packages/permission_handler_platform_interface/src/method_channel/utils/codec.dart", {
+    "package:permission_handler_platform_interface/src/method_channel/utils/codec.dart": codec,
+    "package:permission_handler_platform_interface/src/method_channel/method_channel_permission_handler.dart": method_channel_permission_handler,
+    "package:permission_handler_platform_interface/permission_handler_platform_interface.dart": permission_handler_platform_interface
+  }, {
+    "package:permission_handler_platform_interface/permission_handler_platform_interface.dart": ["src/permission_handler_platform_interface.dart", "src/permission_status.dart", "src/permissions.dart", "src/service_status.dart"]
+  }, '{"version":3,"sourceRoot":"","sources":["codec.dart","../../permission_handler_platform_interface.dart","../method_channel_permission_handler.dart","../../permission_status.dart","../../permissions.dart","../../service_status.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../../D:/packages/permission_handler_platform_interface/src/method_channel/utils/codec.dart.lib.js"}');
+  // Exports:
+  return {
+    src__method_channel__utils__codec: codec,
+    src__method_channel__method_channel_permission_handler: method_channel_permission_handler,
+    permission_handler_platform_interface: permission_handler_platform_interface
+  };
+}));
+
+//# sourceMappingURL=codec.dart.lib.js.map

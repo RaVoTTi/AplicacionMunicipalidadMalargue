@@ -1,0 +1,604 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/widgets/safe_area.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/municipalidad_de_malargue/widgets/widgets.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/rendering/flex.dart'], (function load__packages__municipalidad_de_malargue__screens__page_location2_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__widgets__safe_area$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__municipalidad_de_malargue__widgets__widgets$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__rendering__flex$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const safe_area = packages__flutter__src__widgets__safe_area$46dart.src__widgets__safe_area;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const widgets = packages__municipalidad_de_malargue__widgets__widgets$46dart.widgets__widgets;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  var page_location2 = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    ObjectL: () => (T.ObjectL = dart.constFn(dart.legacy(core.Object)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 17,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 15,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 15,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "function",
+        [_Location_column]: 15,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "urlImage",
+        [_Location_column]: 15,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 13,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 13,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "flexibleSpace",
+        [_Location_column]: 13,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 13,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 22,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 22,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 22,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 66,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 24,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 24,
+        [_Location_line]: 75,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 24,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26, C[27] || CT.C27], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 73,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 22,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30], T._LocationL());
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 71,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 18,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 18,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.constList([C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[32] || CT.C32,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 63,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 17,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 17,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 17,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 16,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37, C[38] || CT.C38, C[39] || CT.C39, C[40] || CT.C40], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottom",
+        [_Location_column]: 15,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "right",
+        [_Location_column]: 15,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.constList([C[43] || CT.C43, C[44] || CT.C44, C[45] || CT.C45, C[46] || CT.C46, C[47] || CT.C47], T._LocationL());
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[42] || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.constList([C[50] || CT.C50], T._LocationL());
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[49] || CT.C49,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 27,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.constList([C[53] || CT.C53], T._LocationL());
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[52] || CT.C52,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///D:/Desktop/MUNI%20REFACTOR%2014.7/AplicacionMunicipalidadMalargue/lib/screens/page_location2.dart"
+      });
+    }
+  }, false);
+  var C = Array(54).fill(void 0);
+  var I = ["package:municipalidad_de_malargue/screens/page_location2.dart"];
+  var urlImage$ = dart.privateName(page_location2, "LocationPage2.urlImage");
+  var title$ = dart.privateName(page_location2, "LocationPage2.title");
+  var schedule$ = dart.privateName(page_location2, "LocationPage2.schedule");
+  var description$ = dart.privateName(page_location2, "LocationPage2.description");
+  var number$ = dart.privateName(page_location2, "LocationPage2.number");
+  var urlLocation$ = dart.privateName(page_location2, "LocationPage2.urlLocation");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  page_location2.LocationPage2 = class LocationPage2 extends framework.StatelessWidget {
+    get urlImage() {
+      return this[urlImage$];
+    }
+    set urlImage(value) {
+      super.urlImage = value;
+    }
+    get title() {
+      return this[title$];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    get schedule() {
+      return this[schedule$];
+    }
+    set schedule(value) {
+      super.schedule = value;
+    }
+    get description() {
+      return this[description$];
+    }
+    set description(value) {
+      super.description = value;
+    }
+    get number() {
+      return this[number$];
+    }
+    set number(value) {
+      super.number = value;
+    }
+    get urlLocation() {
+      return this[urlLocation$];
+    }
+    set urlLocation(value) {
+      super.urlLocation = value;
+    }
+    build(context) {
+      let height = media_query.MediaQuery.of(context).size.height;
+      let width = media_query.MediaQuery.of(context).size.width;
+      return new safe_area.SafeArea.new({child: new basic.Stack.new({children: T.JSArrayOfWidgetL().of([new app_bar.AppBar.new({backgroundColor: colors.Colors.white, leading: new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.chevron_left, {size: dart.notNull(height) * 0.03, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), onPressed: dart.fn(() => navigator.Navigator.pop(T.ObjectL(), context), T.VoidTovoid()), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), flexibleSpace: new widgets.ImgAppBar.new({function: null, urlImage: this.urlImage, $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.only({bottomLeft: new ui.Radius.circular(dart.notNull(height) * 0.04), bottomRight: new ui.Radius.circular(dart.notNull(height) * 0.04)})}), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), new basic.Positioned.fill({top: dart.notNull(height) * 0.27, bottom: dart.notNull(height) * 0.55, left: dart.notNull(width) * 0.16, right: dart.notNull(width) * 0.16, child: new container.Container.new({padding: new edge_insets.EdgeInsets.all(dart.notNull(height) * 0.01), height: dart.notNull(height) * 0.2, decoration: new box_decoration.BoxDecoration.new({color: new ui.Color.new(4278227869), borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(20.0))}), child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T.JSArrayOfWidgetL().of([new widgets.FachaText.new({size: 25.0, title: this.title, color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), new container.Container.new({child: new widgets.FachaText.new({size: 20.0, title: true ? "ABIERTO" : "CERRADO", color: true ? colors.Colors.white : colors.Colors.red, $creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28})]), $creationLocationd_0dea112b090073317d4: C[31] || CT.C31}), $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), $creationLocationd_0dea112b090073317d4: C[41] || CT.C41})]), $creationLocationd_0dea112b090073317d4: C[48] || CT.C48}), $creationLocationd_0dea112b090073317d4: C[51] || CT.C51});
+    }
+  };
+  (page_location2.LocationPage2.new = function(opts) {
+    let urlImage = opts && 'urlImage' in opts ? opts.urlImage : null;
+    let title = opts && 'title' in opts ? opts.title : null;
+    let schedule = opts && 'schedule' in opts ? opts.schedule : null;
+    let description = opts && 'description' in opts ? opts.description : null;
+    let number = opts && 'number' in opts ? opts.number : null;
+    let urlLocation = opts && 'urlLocation' in opts ? opts.urlLocation : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[urlImage$] = urlImage;
+    this[title$] = title;
+    this[schedule$] = schedule;
+    this[description$] = description;
+    this[number$] = number;
+    this[urlLocation$] = urlLocation;
+    page_location2.LocationPage2.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = page_location2.LocationPage2.prototype;
+  dart.addTypeTests(page_location2.LocationPage2);
+  dart.addTypeCaches(page_location2.LocationPage2);
+  dart.setMethodSignature(page_location2.LocationPage2, () => ({
+    __proto__: dart.getMethods(page_location2.LocationPage2.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(page_location2.LocationPage2, I[0]);
+  dart.setFieldSignature(page_location2.LocationPage2, () => ({
+    __proto__: dart.getFields(page_location2.LocationPage2.__proto__),
+    urlImage: dart.finalFieldType(dart.legacy(core.String)),
+    title: dart.finalFieldType(dart.legacy(core.String)),
+    schedule: dart.finalFieldType(dart.legacy(core.String)),
+    description: dart.finalFieldType(dart.legacy(core.String)),
+    number: dart.finalFieldType(dart.legacy(core.String)),
+    urlLocation: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/municipalidad_de_malargue/screens/page_location2.dart", {
+    "package:municipalidad_de_malargue/screens/page_location2.dart": page_location2
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["page_location2.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAIe;;;;;;IAEA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;UAUa;AAClB,mBAAoB,AAAY,AAAK,0BAAd,OAAO;AAC9B,kBAAmB,AAAY,AAAK,0BAAd,OAAO;AAGnC,YAAO,oCACE,+BACa,yBAChB,yCAC0B,8BACf,sCACD,kBACE,iCACO,aAAP,MAAM,IAAG,0EAEN,cAAgB,qCAAI,OAAO,4FAEzB,qCACH,gBACK,+EAEV,uEACwB,iDACJ,uBAAgB,aAAP,MAAM,IAAG,oBACjB,uBAAgB,aAAP,MAAM,IAAG,sEAErC,gCAIK,aAAP,MAAM,IAAG,cACC,aAAP,MAAM,IAAG,YACL,aAAN,KAAK,IAAG,aACD,aAAN,KAAK,IAAG,aACR,sCACe,+BAAW,aAAP,MAAM,IAAG,eAClB,aAAP,MAAM,IAAG,iBACL,6CACD,iBAAM,2BACc,mCAAW,uBAAS,iBAG7C,yCACgC,+CAC3B,yBACR,iCACQ,aACM,mBACE,gFAEhB,oCAES,iCACC,aACC,OAAO,YAAY,kBACnB,OAAc,sBAAe;IAYzD;;;QA1EoB;QACD;QACA;QACA;QACA;QACA;;IALC;IACD;IACA;IACA;IACA;IACA;AANb;;EAM0B","file":"../../../../../packages/municipalidad_de_malargue/screens/page_location2.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__page_location2: page_location2
+  };
+}));
+
+//# sourceMappingURL=page_location2.dart.lib.js.map
